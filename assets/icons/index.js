@@ -18,5 +18,6 @@ export * from "./companyLogoIcon";
 export * from "./eyeIcon";
 export * from "./calenderIcon";
 export * from "./genderBarIcon";
+export * from "./filterIcon";
 
 export { AvatarImage };

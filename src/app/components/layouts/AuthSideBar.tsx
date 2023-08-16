@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { BiSolidDownArrow } from "react-icons/bi";
-import { ComplianceIcon, DashboardIcon, EmployeeIcon, OpenBookIcon, PayrollIcon, QuickLoanIcon, SettingsIcon, SupportIcon, WalletIcon } from "../../../../assets/icons";
+import { ComplianceIcon, DashboardIcon,  EmployeeIcon,  OpenBookIcon, PayrollIcon, QuickLoanIcon, SettingsIcon, SupportIcon, WalletIcon } from "../../../../assets/icons";
 
 
 export const AuthSidebar = () => {
@@ -14,48 +14,48 @@ export const AuthSidebar = () => {
 
   const tabs = [
     {
-      name: "Workspace",
-      href: "/workspace",
+      name: "Dashboard",
+      href: "/dashboard",
       icon: <DashboardIcon width={24}/>,
     },
     {
-      name: "Client",
-      href: "/client",
+      name: "Wallet",
+      href: "/wallet",
       icon: <WalletIcon   width={24}/>,
     },
     {
-      name: "Schedule Appointment",
-      href: "/schedule-appointment",
+      name: "Employee Management",
+      href: "/employee-management",
       icon: <EmployeeIcon width={24} />,
     },
     {
-      name: "Payment",
-      href: "/payment",
+      name: "Payroll",
+      href: "/payroll",
       icon: <PayrollIcon width={24} />,
     },
     {
-      name: "Task",
-      href: "/task",
+      name: "Compliance",
+      href: "/compliance",
       icon: <ComplianceIcon width={24} />,
     },
     {
-      name: "Message",
-      href: "/message",
+      name: "Quick Loan",
+      href: "/quick-loan",
       icon: <QuickLoanIcon  width={24}  />,
     },
     {
-      name: "Reports",
-      href: "/reports",
+      name: "Book Keeping",
+      href: "/book-keeping",
       icon: <OpenBookIcon width={24} />,
     },
     {
-      name: "Reports",
-      href: "/reports",
+      name: "Support",
+      href: "/support",
       icon: <SupportIcon width={24} />,
     },
     {
-      name: "Reports",
-      href: "/reports",
+      name: "Settings",
+      href: "/settings",
       icon: <SettingsIcon width={24} />,
     },
   ];
@@ -73,9 +73,9 @@ export const AuthSidebar = () => {
       </div>
       {tabs.map((tab) => (
         <div key={tab.href}>
-          {tab.name === "Reports" || tab.name ==="Schedule Appointment" ? ( // Check if it's the "Reports" tab
+          {tab.name === "Reports" || tab.name ==="Employee Management" ? ( // Check if it's the "Reports" tab
             <div
-              className={`flex px-5 items-center gap-x-5 cursor-pointer p-5 ${
+              className={`flex border-b-[.08px] border-gray-300 px-5 items-center gap-x-5 cursor-pointer p-5 ${
                 showReportsDropdown ? "bg-white" : ""
               }`}
               onClick={() => setShowReportsDropdown(!showReportsDropdown)}
@@ -89,9 +89,9 @@ export const AuthSidebar = () => {
           ) : (
             <Link
               href={tab.href}
-              className={`flex px-5 items-center gap-x-5 cursor-pointer p-5 ${
+              className={`flex border-b-[.08px] border-gray-300 px-5 items-center gap-x-5 cursor-pointer p-5 ${
                 pathname === tab.href
-                  ? "border-l-4 border-yellow-500 text-yellow-500"
+                  ? "border-l-4 border-[#11453B] text-[#11453B] bg-[#E7E8E7]"
                   : "bg-white"
               }`}
             >
