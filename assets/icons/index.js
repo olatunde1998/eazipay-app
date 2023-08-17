@@ -1,5 +1,12 @@
 import AvatarImage from "../../public/images/avatarImg.svg";
 
+export * from "./heroImage";
+export * from "./appleIcon";
+export * from "./googlePlayIcon";
+export * from "./howEazipayImage";
+export * from "./paymentIcon";
+
+
 export * from "./accountIcon";
 export * from "./backIcon";
 export * from "./hamburgerIcon";

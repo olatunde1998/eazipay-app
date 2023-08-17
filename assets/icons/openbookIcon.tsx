@@ -1,12 +1,10 @@
 interface openBookIconProps {
-  //   color?: string;
   className?: string;
   width?: number;
   height?: number;
 }
 
 export const OpenBookIcon = ({
-  //   color,
   className,
   width,
   height,

@@ -1,12 +1,10 @@
 interface payrollIconProps {
-  //   color?: string;
   className?: string;
   width?: number;
   height?: number;
 }
 
 export const PayrollIcon = ({
-  //   color,
   className,
   width,
   height,

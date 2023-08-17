@@ -1,33 +1,31 @@
 interface InputProps {
-  label?: string;
+
   className?: string;
-  name?: string;
   type?: string;
   inputName?: string;
   focusContent?: string;
   register?: any;
+  placeholder?: string;
 }
 
 export const Input = ({
-  label,
-  name,
+ 
   type,
   className,
-  focusContent,
   inputName,
-  register,
+  // register,
+  placeholder,
 }: InputProps) => {
   return (
     <>
-      <div className={`${className} rounded-md cursor-pointer space-y-3`}>
-        <label htmlFor={name} className="font-semibold text-sm flex">
-          {label} <span className="ml-1 text-red-700 font-normal text-[10px] hidden lg:block">{focusContent}</span>
-        </label>
+      <div className={`${className} my-4 rounded-full cursor-pointer space-y-3`}>
+        
         <input
           name={inputName}
           type={type}
-          {...register}
-          className={`border rounded focus:outline-none p-3 w-full`}
+          placeholder={placeholder}
+          // {...register}
+          className={`border rounded-xl focus:outline-none p-3 w-full`}
         />
       </div>
     </>
