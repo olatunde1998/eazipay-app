@@ -1,12 +1,10 @@
 interface dashboardIconProps {
-//   color?: string;
   className?: string;
   width?: number;
   height?: number;
 }
 
 export const DashboardIcon = ({
-//   color,
   className,
   width,
   height,
