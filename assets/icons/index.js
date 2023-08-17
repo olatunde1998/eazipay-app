@@ -5,6 +5,7 @@ export * from "./appleIcon";
 export * from "./googlePlayIcon";
 export * from "./howEazipayImage";
 export * from "./paymentIcon";
+export * from "./eazipayIcon";
 
 
 export * from "./accountIcon";
