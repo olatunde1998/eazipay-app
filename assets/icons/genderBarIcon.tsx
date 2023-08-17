@@ -1,12 +1,10 @@
 interface genderBarIconProps {
-//   color?: string;
   className?: string;
   width?: number;
   height?: number;
 }
 
 export const GenderBarIcon = ({
-//   color,
   className,
   width,
   height,
