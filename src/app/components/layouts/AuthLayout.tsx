@@ -21,7 +21,7 @@ export const AuthLayout = ({ children }: AuthLayoutProps) => {
       <>
         <div className="relative font-Nunito">
           <div className="flex justify-between">
-            <div className="min-w-[15.2rem] hidden  lg:block  md:min-w-[18.9rem] lg:min-w-[18.5rem] lg:fixed border-r xl:min-w-[18.3rem]">
+            <div className="min-w-[15.2rem] hidden  lg:block  md:min-w-[18.9rem]  lg:fixed">
               <AuthSidebar />
             </div>
             {openMobileSidebar && (

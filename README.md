@@ -23,7 +23,7 @@ Rasheed Olatunde -->
  + [Typescript](https://www.typescriptlang.org/) 
  + [JavaScript](https://javascript.info/) 
  + [NextJs](https://nextjs.org/)
- + [ReactJs](https://react.dev/) 
+ + [React Chart-2.Js](https://react-chartjs-2.js.org/examples/line-chart/) 
  + [Vercel](https://vercel.com/dashboard) 
  + [Github Actions](https://docs.github.com/en/actions/)
  + [TailwindCss](https://tailwindcss.com/) 

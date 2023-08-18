@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <AuthLayout>
         <main className="min-h-screen  text-gray-600  p-4 px-6 md:p-8">
-          <HeaderCrumb prevLink="Support" nextLink="" />
+          <HeaderCrumb prevLink="Book Keeping Two" nextLink="" />
           <p className="my-4 text-gray-400 text-[12px] md:text-[18px]">
             Pay and manage your employee in minutes
           </p>
