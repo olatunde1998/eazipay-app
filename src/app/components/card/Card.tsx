@@ -43,7 +43,7 @@ export const WalletCard = ({
   return (
     <>
       <main
-        className="rounded-xl md:mt-0 max-w-[800px] h-fit py-8 px-4 text-white bg-[url(/images/walletcard_bg.svg)] 
+        className="rounded-xl md:mt-0 h-fit py-8 px-4 text-white bg-[url(/images/walletcard_bg.svg)] 
 bg-no-repeat bg-cover bg-center"
       >
         <div>

@@ -32,13 +32,25 @@ export const LineChart = ({ className }: InputProps) => {
         <div className="md:flex justify-between">
           <div>
             <p>Inflow</p>
-            <p className="text-[#219653] font-bold text-[14px] md:text-[24px]">N1,567,552</p>
+            <p className="text-[#219653] font-bold text-[14px] md:text-[24px]">
+              N1,567,552
+            </p>
           </div>
           <div>
-            <p >Outflow</p>
-            <p className="text-[#EF4444] font-bold text-[14px] md:text-[24px]">N1,567,552</p>
+            <p>Outflow</p>
+            <p className="text-[#EF4444] font-bold text-[14px] md:text-[24px]">
+              N1,567,552
+            </p>
           </div>
-          <p className="flex items-center md:justify-center gap-2">Inflow/Outflow <span><DropDownIcon width={16} className="cursor-pointer w-[12px] md:w-[16px]"/></span></p>
+          <p className="flex items-center md:justify-center gap-2">
+            Inflow/Outflow{" "}
+            <span>
+              <DropDownIcon
+                width={16}
+                className="cursor-pointer w-[12px] md:w-[16px]"
+              />
+            </span>
+          </p>
         </div>
         <Line
           data={{
@@ -97,6 +109,9 @@ export const LineChart = ({ className }: InputProps) => {
             },
           }}
         />
+        <div className="flex justify-end mt-10">
+          <p className="bg-[#11453B] p-3 text-white w-fit">2022</p>
+        </div>
       </div>
     </>
   );
