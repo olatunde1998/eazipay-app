@@ -29,16 +29,16 @@ export const LineChart = ({ className }: InputProps) => {
   return (
     <>
       <div className={`${className} my-12`}>
-        <div className="flex justify-between">
+        <div className="md:flex justify-between">
           <div>
             <p>Inflow</p>
-            <p className="text-[#219653] font-bold text-[24px]">N1,567,552</p>
+            <p className="text-[#219653] font-bold text-[14px] md:text-[24px]">N1,567,552</p>
           </div>
           <div>
             <p >Outflow</p>
-            <p className="text-[#EF4444] font-bold text-[24px]">N1,567,552</p>
+            <p className="text-[#EF4444] font-bold text-[14px] md:text-[24px]">N1,567,552</p>
           </div>
-          <p className="flex items-center justify-center gap-2">Inflow/Outflow <span><DropDownIcon width={16} className="cursor-pointer"/></span></p>
+          <p className="flex items-center md:justify-center gap-2">Inflow/Outflow <span><DropDownIcon width={16} className="cursor-pointer w-[12px] md:w-[16px]"/></span></p>
         </div>
         <Line
           data={{
