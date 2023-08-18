@@ -36,7 +36,7 @@ export const AuthLayout = ({ children }: AuthLayoutProps) => {
                 setOpenMobileSidebar={setOpenMobileSidebar}
                 openMobileSidebar={openMobileSidebar}
               />
-              <div className="min-h-screen  pt-16 pb-6 w-full px-0 md:px-4 md:pt-24">
+              <div className="min-h-screen  pt-16 pb-6 w-full px-0 md:px-4 md:pt-24 max-w-[1400px]">
                 {children}
               </div>
             </main>

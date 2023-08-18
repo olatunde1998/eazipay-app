@@ -5,3 +5,5 @@ export * from "./card"
 export * from "./input"
 export * from "./table"
 export * from "./line-chart"
+export * from "./landing-page-component";
+export * from "./dashboard-component";
