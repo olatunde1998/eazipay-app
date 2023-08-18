@@ -54,7 +54,7 @@ const aeonik = localFont({
 
 export const metadata: Metadata = {
   title: "Eazipay - Run your payroll in seconds",
-  description: 'Travel Manager App for managing your travel plans',
+  description: 'Eazipay web app for managing your payroll in Seconds',
 };
 
 export default function RootLayout({
