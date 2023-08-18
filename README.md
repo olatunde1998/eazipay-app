@@ -1,22 +1,22 @@
 <div align="center">
 <h1>Eazipay Web Application</h1>
-<h6><i>Enjoy your payment Schedule with the application</i></h6>
+<h6><i>Enjoy your payment Payroll with the application</i></h6>
 <hr />
 </div>
 
 Hello, 👋 
-<!-- Eazipay Web Application allows user to manage their travel plans. -->
+Eazipay web app for managing your payroll in Seconds
 
-<!-- Here's some notes about my submission:
+Here's some notes about my submission:
 
 1. A link to the project repository   https://github.com/olatunde1998/eazipay-app
 
-2. A publicly live hosted URL of the challenge  https://travel-manager-app.vercel.app
+2. A publicly live hosted URL of the challenge  https://eazipay-app.vercel.app/, https://eazipay-app.vercel.app/dashboard/
 
 Thank you very much.
 
 Best regards\
-Rasheed Olatunde -->
+Rasheed Olatunde
 
 # Technologies 
 
