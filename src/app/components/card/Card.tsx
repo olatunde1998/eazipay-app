@@ -25,8 +25,8 @@ export const ShortCard = ({
 }: shortCardIconProps) => {
   return (
     <>
-      <main className=" md:mt-0  text-gray-600">
-        <div className="w-[200px] h-[112px] shadow-[0_8px_30px_rgb(0,0,0,0.12)]  flex flex-col items-center justify-center  rounded-2xl ">
+      <main className="w-full md:mt-0  text-gray-600">
+        <div className="h-[112px] shadow-[0_8px_30px_rgb(0,0,0,0.12)]  flex flex-col items-center justify-center  rounded-2xl ">
           <div className={`${className} rounded-lg w-fit p-4`}>{cardIcon}</div>
           <p className="mt-2">{cardTitle}</p>
         </div>
@@ -43,7 +43,7 @@ export const WalletCard = ({
   return (
     <>
       <main
-        className=" md:mt-0 max-w-[800px] h-fit py-8 px-4 text-white bg-[url(/images/walletcard_bg.svg)] 
+        className="rounded-xl md:mt-0 max-w-[800px] h-fit py-8 px-4 text-white bg-[url(/images/walletcard_bg.svg)] 
 bg-no-repeat bg-cover bg-center"
       >
         <div>
@@ -72,10 +72,10 @@ export const PayrollCard = ({
 }: payrollCardIconProps) => {
   return (
     <>
-      <main className="w-[250px]">
-      <section className="border-b-[.08px] border-gray-400 h-1/2 pb-4">
-          <div className="bg-[#D9EBCD] text-center p-4">
-            <p>Next Payroll</p>
+      <main className="mt-8 md:w-[250px] md:mt-0 shadow-lg pb-4 rounded-b-2xl">
+        <section className="border-b-[.08px] border-gray-400 h-1/2 pb- ">
+          <div className="bg-[#D9EBCD] text-center p-4 rounded-t-2xl">
+            <p className="font-bold">Next Payroll</p>
           </div>
           {/* date and calender */}
           <div className="text-center pt-4">
@@ -86,16 +86,16 @@ export const PayrollCard = ({
                 </span>
                 Friday
               </p>
-              <p className="font-bold">09/11/2022</p>
+              <p className="font-bold my-2">09/11/2022</p>
             </div>
           </div>
         </section>
         {/* Total Employee */}
-        <section className="h-1/2 p-2">
+        <section className="h-1/2 px-4 py-2">
           <div>
             <p>Total Employee</p>
-            <p className="font-bold text-[48px]">64</p>
-            <GenderBarIcon width={245} height={24} />
+            <p className="font-bold text-[28px] md:text-[28px]">64</p>
+            <GenderBarIcon width={245} height={24} className="w-full" />
           </div>
           <div className="flex">
             <div className="w-1/2">

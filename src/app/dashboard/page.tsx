@@ -2,12 +2,19 @@
 import {
   AuthLayout,
   HeaderCrumb,
+  LineChart,
   PayrollCard,
   ShortCard,
   Table,
   WalletCard,
 } from "@/app/components/index";
-import { EmployeeIcon, FilterIcon } from "../../../assets/icons";
+import {
+  EmployeeIcon,
+  FilterIcon,
+  QuickLoanIcon,
+  SalaryIcon,
+  SendIcon,
+} from "../../../assets/icons";
 
 export default function Home() {
   return (
@@ -27,8 +34,8 @@ export default function Home() {
                 <WalletCard />
               </div>
               {/* short Cards  */}
-              <div className="md:flex flex-wrap w-fit">
-                <div className="mt-16">
+              <div className="md:flex flex-wrap lg:grid lg:grid-cols-2 md:space-x-2 xl:flex xl:space-x-1 md:w-fit xl:mt-12">
+                <div className="mt-8 md:mt-3 w-full md:w-[200px]">
                   <ShortCard
                     cardIcon={
                       <EmployeeIcon
@@ -42,35 +49,33 @@ export default function Home() {
                     className="bg-[#FFEDEC]"
                   />
                 </div>
-                <div className="mt-16">
+                <div className="mt-8 md:mt-3 w-full md:w-[200px]">
                   <ShortCard
-                    cardIcon={
-                      <EmployeeIcon color="#EA4E4B" width={24} height={24} />
-                    }
+                    cardIcon={<SalaryIcon width={28} height={28} />}
                     cardTitle="Pay Salaries"
                     className="bg-[#F0F7EB]"
                   />
                 </div>
-                <div className="mt-16">
+                <div className="mt-8 md:mt-3 w-full md:w-[200px]">
                   <ShortCard
                     cardIcon={
-                      <EmployeeIcon
+                      <SendIcon
                         className=""
-                        color="#EA4E4B"
-                        width={24}
-                        height={24}
+                        color="#219653"
+                        width={20}
+                        height={20}
                       />
                     }
                     cardTitle="Pay Compliances"
                     className="bg-[#E0F8EA]"
                   />
                 </div>
-                <div className="mt-16">
+                <div className="mt-8 md:mt-3 w-full md:w-[200px]">
                   <ShortCard
                     cardIcon={
-                      <EmployeeIcon
+                      <QuickLoanIcon
                         className=""
-                        color="#EA4E4B"
+                        color="#2F80ED"
                         width={24}
                         height={24}
                       />
@@ -84,6 +89,13 @@ export default function Home() {
             <div>
               <PayrollCard />
             </div>
+          </section>
+
+
+           {/* line chart */}
+
+           <section>
+            <LineChart  className="bg-white  p-12 shadow-lg rounded-lg"/>
           </section>
 
           {/* Recent Activities */}
@@ -129,10 +141,12 @@ export default function Home() {
             </div>
           </section>
 
+         
+
           {/* Activities card */}
           <section>
             <div>
-              <p  className="mb-4 mt-16">Wednessday, November 09, 2022</p>
+              <p className="mb-4 mt-16">Wednessday, November 09, 2022</p>
               <Table
                 fullName="Badmus Kennis"
                 cardTitle="Payroll"
@@ -156,7 +170,7 @@ export default function Home() {
               />
             </div>
             <div>
-              <p  className="mb-4 mt-16">Friday, November 04, 2022</p>
+              <p className="mb-4 mt-16">Friday, November 04, 2022</p>
               <Table
                 fullName="Badmus Kennis"
                 cardTitle="Bonus"
@@ -166,7 +180,7 @@ export default function Home() {
                 employeeHeading="Bonus Name"
                 employeeContent="XMAS Bonus"
               />
-               <Table
+              <Table
                 fullName="Badmus Kennis"
                 cardTitle="Payroll"
                 imgUrl="BM"
@@ -177,8 +191,6 @@ export default function Home() {
                 timeHeading="Time"
                 timeContent="15:31"
               />
-
-             
             </div>
           </section>
         </main>

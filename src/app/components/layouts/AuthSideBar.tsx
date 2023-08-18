@@ -1,52 +1,65 @@
 "use client";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-
 import Image from "next/image";
 import { useState } from "react";
-import { BiSolidDownArrow } from "react-icons/bi";
-import { ComplianceIcon, DashboardIcon,  EmployeeIcon,  OpenBookIcon, PayrollIcon, QuickLoanIcon, SettingsIcon, SupportIcon, WalletIcon } from "../../../../assets/icons";
-
+import {
+  ComplianceIcon,
+  DashboardIcon,
+  DropDownIcon,
+  EmployeeIcon,
+  OpenBookIcon,
+  PayrollIcon,
+  QuickLoanIcon,
+  SettingsIcon,
+  SupportIcon,
+  WalletIcon,
+} from "../../../../assets/icons";
 
 export const AuthSidebar = () => {
   const pathname = usePathname();
-   const [showReportsDropdown, setShowReportsDropdown] = useState(true); 
+  const [showEmployeeDropdown, setShowEmployeeDropdown] = useState(false);
+  const [showPayrollDropdown, setShowPayrollDropdown] = useState(false);
+  const [showComplianceDropdown, setShowComplianceDropdown] = useState(false);
+  const [showQuickLoanDropdown, setShowQuickLoanDropdown] = useState(false);
+  const [showBookKeepingDropdown, setShowBookKeepingDropdown] = useState(false);
+  const [showSettingsDropdown, setShowSettingsDropdown] = useState(false);
 
   const tabs = [
     {
       name: "Dashboard",
       href: "/dashboard",
-      icon: <DashboardIcon width={24}/>,
+      icon: <DashboardIcon width={24} />,
     },
     {
       name: "Wallet",
       href: "/wallet",
-      icon: <WalletIcon   width={24}/>,
+      icon: <WalletIcon width={24} />,
     },
     {
       name: "Employee Management",
       href: "/employee-management",
-      icon: <EmployeeIcon width={24} />,
+      icon: <EmployeeIcon color="#515251" width={36} />,
     },
     {
       name: "Payroll",
       href: "/payroll",
-      icon: <PayrollIcon width={24} />,
+      icon: <PayrollIcon width={28} />,
     },
     {
       name: "Compliance",
       href: "/compliance",
-      icon: <ComplianceIcon width={24} />,
+      icon: <ComplianceIcon width={28} />,
     },
     {
       name: "Quick Loan",
       href: "/quick-loan",
-      icon: <QuickLoanIcon  width={24}  />,
+      icon: <QuickLoanIcon width={28} color="#515251" />,
     },
     {
       name: "Book Keeping",
       href: "/book-keeping",
-      icon: <OpenBookIcon width={24} />,
+      icon: <OpenBookIcon width={28} />,
     },
     {
       name: "Support",
@@ -56,57 +69,138 @@ export const AuthSidebar = () => {
     {
       name: "Settings",
       href: "/settings",
-      icon: <SettingsIcon width={24} />,
+      icon: <SettingsIcon width={28} />,
     },
   ];
 
   return (
-    <nav className="fixed top-0 z-30 bg-white h-full md:top-[70px] left-0  w-[200px]  md:w-[300px] lg:top-[70px] lg:w-[280px]">
-      <div className=" mt-20 relative w-[100px] h-[90px] md:mt-0 mx-auto">
+    <nav className="fixed top-0 z-40 h-full md:top-[70px] left-0  w-[200px]  md:w-[300px] lg:top-[70px] lg:w-[260px]">
+      <div className="relative w-[262px] right-[9px] top-[-70px]  h-[150px]">
         <Image
-          src="/images/brandLogo-removebg-preview.png"
+          src="/images/sidebar_img.png"
           alt="company brand logo"
           fill
-          className=" w-full"
+          className=" w-fit h-fit"
         />
-   
       </div>
       {tabs.map((tab) => (
         <div key={tab.href}>
-          {tab.name === "Reports" || tab.name ==="Employee Management" ? ( // Check if it's the "Reports" tab
-            <div
-              className={`flex border-b-[.08px] border-gray-300 px-5 items-center gap-x-5 cursor-pointer p-5 ${
-                showReportsDropdown ? "bg-white" : ""
-              }`}
-              onClick={() => setShowReportsDropdown(!showReportsDropdown)}
-            >
-              {tab.icon}
-              <span className="flex items-center">
-                {tab.name}
-                <BiSolidDownArrow size={12} className="text-gray-400 ml-8" />
-              </span>
-            </div>
-          ) : (
+          {tab.name === "Dashboard" ||
+          tab.name === "Support" ||
+          tab.name == "Wallet" ? ( // Check if it's the "Reports" tab
             <Link
               href={tab.href}
-              className={`flex border-b-[.08px] border-gray-300 px-5 items-center gap-x-5 cursor-pointer p-5 ${
+              className={`flex border-b-[.08px] border-gray-300 px-5 items-center gap-x-5 cursor-pointer p-5 text-[#11453B] ${
                 pathname === tab.href
-                  ? "border-l-4 border-[#11453B] text-[#11453B] bg-[#E7E8E7]"
+                  ? "border-l-4 border-[#11453B] text-[#11453B] bg-[#F0F7EB]"
                   : "bg-white"
               }`}
             >
               {tab.icon}
               {tab.name}
             </Link>
+          ) : (
+            <div
+              className={`flex border-b-[.08px] border-gray-300 px-5 items-center gap-x-5 cursor-pointer p-5 ${
+                // Use the appropriate dropdown state
+                (tab.name === "Employee Management" && showEmployeeDropdown) ||
+                (tab.name === "Payroll" && showPayrollDropdown) ||
+                (tab.name === "Compliance" && showComplianceDropdown) ||
+                (tab.name === "Quick Loan" && showQuickLoanDropdown) ||
+                (tab.name === "Book Keeping" && showBookKeepingDropdown) ||
+                (tab.name === "Settings" && showSettingsDropdown)
+                  ? "border-l-4 border-[#11453B] text-[#11453B] bg-[#F0F7EB]"
+                  : "bg-white"
+              }`}
+              onClick={() => {
+                // Use the appropriate setter function
+                if (tab.name === "Employee Management") {
+                  setShowEmployeeDropdown(!showEmployeeDropdown);
+                } else if (tab.name === "Payroll") {
+                  setShowPayrollDropdown(!showPayrollDropdown);
+                } else if (tab.name === "Compliance") {
+                  setShowComplianceDropdown(!showComplianceDropdown);
+                } else if (tab.name === "Quick Loan") {
+                  setShowQuickLoanDropdown(!showQuickLoanDropdown);
+                } else if (tab.name === "Book Keeping") {
+                  setShowBookKeepingDropdown(!showBookKeepingDropdown);
+                } else if (tab.name === "Settings") {
+                  setShowSettingsDropdown(!showSettingsDropdown);
+                }
+              }}
+            >
+              {tab.icon}
+              <span className="flex text-[#11453B] items-center justify-between  w-full">
+                {tab.name}
+
+                <DropDownIcon width={12} className="cursor-pointer" />
+              </span>
+            </div>
           )}
 
-          {tab.name === "Reports" && showReportsDropdown && (
-            <div className="pl-14">
-              <Link href="/reports/activity-report" className="block p-3 ">
-                Activity Report
+          {tab.name === "Employee Management" && showEmployeeDropdown && (
+            <div className="pl-14 text-[#11453B]">
+              <Link
+                href="/employee-management/manager-one"
+                className="block p-3 "
+              >
+                Manager One
               </Link>
-              <Link href="/reports/task-report" className="block p-3">
-                Task Report
+              <Link
+                href="/employee-management/manager-two"
+                className="block p-3"
+              >
+                Manager Two
+              </Link>
+            </div>
+          )}
+
+          {tab.name === "Payroll" && showPayrollDropdown && (
+            <div className="pl-14 text-[#11453B]">
+              <Link href="/payroll/roll-one" className="block p-3 ">
+                Roll One
+              </Link>
+              <Link href="/payroll/roll-two" className="block p-3">
+                Roll Two
+              </Link>
+            </div>
+          )}
+          {tab.name === "Compliance" && showComplianceDropdown && (
+            <div className="pl-14 text-[#11453B]">
+              <Link href="/compliance/comply-one" className="block p-3 ">
+                Comply One
+              </Link>
+              <Link href="/compliance/comply-one" className="block p-3">
+                Comply Two
+              </Link>
+            </div>
+          )}
+
+          {tab.name === "Quick Loan" && showQuickLoanDropdown && (
+            <div className="pl-14 text-[#11453B]">
+              <Link href="/quick-loan/loan-one" className="block p-3 ">
+                Loan One
+              </Link>
+              <Link href="/quick-loan/loan-two" className="block p-3">
+                Loan Two
+              </Link>
+            </div>
+          )}
+
+          {tab.name === "Book Keeping" && showBookKeepingDropdown && (
+            <div className="pl-14 text-[#11453B]">
+              <Link href="/book-keeping/book-one" className="block p-3 ">
+                Book One
+              </Link>
+              <Link href="/book-keeping/book-two" className="block p-3">
+                Book Two
+              </Link>
+            </div>
+          )}
+          {tab.name === "Settings" && showSettingsDropdown && (
+            <div className="pl-14 text-[#11453B]">
+              <Link href="/settings/profile-setting" className="block p-3 ">
+                Profile Settings
               </Link>
             </div>
           )}

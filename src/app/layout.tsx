@@ -64,7 +64,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${mademellow.variable} ${aeonik.variable}`}>
-      <body className=" font-body">{children}</body>
+      <body className="font-body">{children}</body>
     </html>
   );
 }

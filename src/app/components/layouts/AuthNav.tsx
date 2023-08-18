@@ -1,7 +1,8 @@
+import { useRouter } from "next/navigation";
 import {
   AvatarImage,
-  AccountIcon,
   CompanyLogoIcon,
+  NextIcon,
 } from "../../../../assets/icons";
 import { NotificationIcon } from "../../../../assets/icons/notificationIcon";
 import Image from "next/image";
@@ -17,13 +18,11 @@ export const AuthNav = ({
   setOpenMobileSidebar,
   openMobileSidebar,
 }: AuthNavProps) => {
+  const router = useRouter();
   return (
     <nav className="w-full h-[70px] px-5 fixed bg-white bg-opacity-95 z-20 top-0 lg:h-[70px]">
       <div className="flex justify-between items-center  h-full ">
-        <div
-          className="cursor-pointer block"
-          // onClick={() => setOpenMobileSidebar(!openMobileSidebar)}
-        >
+        <div className="cursor-pointer block" onClick={() => router.push("/")}>
           <CompanyLogoIcon />
         </div>
 
@@ -40,9 +39,15 @@ export const AuthNav = ({
                 className="border rounded-full p-[0.1rem]"
               />
             </span>
+
             <div className="hidden md:block">
               <p className="font-semibold text-[14px]">Kalu Abasiama</p>
-              <p className="text-gray-400 text-[12px]">Admin</p>
+              <p className="text-gray-400 text-[12px] flex justify-center items-center gap-20">
+                Admin{" "}
+                <span>
+                  <NextIcon width={8} className="cursor-pointer" />
+                </span>
+              </p>
             </div>
           </div>
         </div>
